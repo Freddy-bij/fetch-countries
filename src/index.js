@@ -1,6 +1,6 @@
 const btnCountries = document.querySelector('#fetch-countries');
 const contriesContainer = document.querySelector('#contries-container')
-const input = document.querySelector('#input-reseach');
+const searchInput = document.querySelector('#input-reseach');
 
 let countriesArray =[];
 
@@ -36,7 +36,7 @@ btnCountries.addEventListener('click',fetchRandomCountrie)
      contriesContainer.append(divElt,)
     });
    }
-   input.addEventListener('keyup',(e)=>{
+   searchInput.addEventListener('keyup',(e)=>{
       const term = e.target.value.toLowerCase();
       
    const filteredCountries = countriesArray.filter(country => country.name.common.toLowerCase().includes(term));
